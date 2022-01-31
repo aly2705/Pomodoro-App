@@ -1,4 +1,23 @@
-.hey {
-  background-color: var(--color-primary);
-  color: var(--color-text-primary);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ruge+Boogie&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.container {
+  display: grid;
+  background-color: var(--color-grey-1);
+  min-height: 100vh;
+  width: 100%;
+  grid-template-rows: 15rem auto;
+  grid-template-columns: minmax(30rem, 1fr) 3fr 2fr;
 }

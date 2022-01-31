@@ -4,11 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/ico" href="src/img/favicon.ico" />
     <link rel="stylesheet" href="src/css/main.css" />
     <script type="module" src="src/js/controller.js"></script>
     <title>pomoDo | your productivity app</title>
   </head>
-  <body>
-    <span class="hey">Hello world</span>
+  <body class="container">
+    <header class="header">
+      <figure class="logo">
+        <img src="src/img/logo.png" alt="Logo Image" class="logo__img" />
+        <figcaption class="logo__name">pomoDo</figcaption>
+      </figure>
+      <div class="options">
+        <a href="#" class="header__link option__settings">
+          <svg>
+            <use xlink:href="src/img/icons.svg#icon-cog"></use>
+          </svg>
+          <span class="option__label">Settings</span>
+        </a>
+      </div>
+      <div class="profile">
+        <a href="#" class="header__link profile__notifications">
+          <svg>
+            <use xlink:href="src/img/icons.svg#icon-bell"></use>
+          </svg>
+        </a>
+        <div class="profile__label">
+          <div class="profile__avatar"></div>
+          <span class="profile__name">Guest</span>
+        </div>
+      </div>
+    </header>
+    <nav class="sidebar"></nav>
+    <main class="main"></main>
+    <aside class="tasks"></aside>
   </body>
 </html>
