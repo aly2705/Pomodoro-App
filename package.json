@@ -1,8 +1,8 @@
 {
   "name": "pomodoro",
   "version": "1.0.0",
-  "description": "productivity app, tracker for progress with an incoporated pomodoro timer",
-  "default": "index.html",
+  "description": "productivity app, tracker for progress with an incorporated pomodoro timer",
+  "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass src/sass/main.scss src/css/main.css -w",
     "devserver": "parcel index.html",
@@ -20,7 +20,7 @@
     "autoprefixer": "^9.8.6",
     "node-sass": "^5.0.0",
     "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.0.0-rc.0",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
     "sass": "^1.32.8"
