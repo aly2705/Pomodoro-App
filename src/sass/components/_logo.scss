@@ -1,0 +1,16 @@
+.logo {
+  padding: 0.5rem 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    height: 8rem;
+    margin-right: 1.5rem;
+  }
+  &__name {
+    font-family: 'Henny Penny', cursive;
+    font-size: 4rem;
+    transform: translateY(3px);
+  }
+}

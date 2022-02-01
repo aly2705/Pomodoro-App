@@ -1,2 +1,8 @@
 import * as model from './model';
-console.log(model.state);
+import sidebarView from './views/sidebarView.js';
+
+const init = function () {
+  sidebarView.addHandlerActiveLink();
+};
+
+init();

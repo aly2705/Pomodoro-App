@@ -15,28 +15,54 @@
         <img src="src/img/logo.png" alt="Logo Image" class="logo__img" />
         <figcaption class="logo__name">pomoDo</figcaption>
       </figure>
-      <div class="options">
-        <a href="#" class="header__link option__settings">
+      <ul class="header__profile-options">
+        <li class="header__option">
+        <a href="#" class="header__link">
           <svg>
             <use xlink:href="src/img/icons.svg#icon-cog"></use>
-          </svg>
-          <span class="option__label">Settings</span>
+          </svg>Settings
         </a>
-      </div>
-      <div class="profile">
-        <a href="#" class="header__link profile__notifications">
+      </li>
+      <li class="header__option">
+        <a href="#" class="header__link">
           <svg>
             <use xlink:href="src/img/icons.svg#icon-bell"></use>
+            
           </svg>
-        </a>
-        <div class="profile__label">
-          <div class="profile__avatar"></div>
-          <span class="profile__name">Guest</span>
-        </div>
+          <span class="header__new-notifications">2</span>
+          Notifications
+         
+        </a></li>
+        <li class="header__profile-label">
+          <img class="header__profile-avatar" src="src/img/profile.svg"></img>
+          <span class="header__profile-name">Guest</span>
+        </li>
       </div>
     </header>
-    <nav class="sidebar"></nav>
+    <nav class="sidebar">
+      <ul class="sidebar__list  ">
+        <li class="sidebar__item sidebar__item--active"><a href="#pomodoro" class="sidebar__link ">
+          <svg>
+            <use xlink:href="src/img/icons.svg#icon-stopwatch"></use>
+          </svg>Pomodoro
+        </a></li>
+        <li class="sidebar__item"><a href="#dashboard" class="sidebar__link">
+          <svg>
+            <use xlink:href="src/img/icons.svg#icon-home"></use>
+          </svg>Dashboard
+        </a></li>
+        <li class="sidebar__item"><a href="#statistics" class="sidebar__link">
+          <svg>
+            <use xlink:href="src/img/icons.svg#icon-bar-graph"></use>
+          </svg>Statistics
+        </a></li>
+        <li class="sidebar__item"><a href="#rewards" class="sidebar__link">
+          <svg>
+            <use xlink:href="src/img/icons.svg#icon-trophy"></use>
+          </svg>Rewards
+        </a></li>
+      </ul>
+    </nav>
     <main class="main"></main>
-    <aside class="tasks"></aside>
   </body>
 </html>

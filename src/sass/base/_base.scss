@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ruge+Boogie&display=swap');
-
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ruge+Boogie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Montserrat:wght@400;500;600;700&display=swap');
 *,
 *::after,
 *::before {
@@ -15,9 +15,12 @@ html {
 
 .container {
   display: grid;
-  background-color: var(--color-grey-1);
+  background-color: var(--color-background);
   min-height: 100vh;
   width: 100%;
-  grid-template-rows: 15rem auto;
-  grid-template-columns: minmax(30rem, 1fr) 3fr 2fr;
+  grid-template-rows: [header-start] 9rem [header-end] auto;
+  grid-template-columns: [sidebar-start] 30rem [sidebar-end main-start] 1fr[main-end];
+  grid-template-areas:
+    'header header'
+    'sidebar main';
 }

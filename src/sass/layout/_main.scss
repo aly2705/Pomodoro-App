@@ -1,0 +1,5 @@
+.main {
+  grid-column: main-start / main-end;
+  grid-area: main;
+  background-color: var(--color-grey-1);
+}
