@@ -11,6 +11,20 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  // @include respond(tab-land-small) {
+  //   font-size: 50%;
+  // }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 .container {
@@ -23,4 +37,12 @@ html {
   grid-template-areas:
     'header header'
     'sidebar main';
+
+  @include respond(phone) {
+    grid-template-rows: [header-start] 9rem [header-end] auto;
+    grid-template-columns: [main-start] 1fr[main-end];
+    grid-template-areas:
+      'header'
+      'main';
+  }
 }

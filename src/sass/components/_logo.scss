@@ -5,12 +5,25 @@
   align-items: center;
 
   &__img {
-    height: 8rem;
+    height: 7.5rem;
     margin-right: 1.5rem;
+
+    @include respond(phone-small) {
+      height: 6rem;
+      margin-right: 1rem;
+    }
   }
   &__name {
     font-family: 'Henny Penny', cursive;
-    font-size: 4rem;
+    font-size: 3.8rem;
     transform: translateY(3px);
+
+    @include respond(phone-small) {
+      font-size: 3rem;
+    }
   }
+
+  // @include respond(phone-small) {
+  //   order: 3;
+  // }
 }

@@ -3,10 +3,13 @@ class SidebarView {
   _navLinks = document.querySelectorAll('.sidebar__item');
 
   addHandlerActiveLink() {
-    this._parentElement.addEventListener('click', this.changeActive.bind(this));
+    this._parentElement.addEventListener(
+      'click',
+      this._changeActive.bind(this)
+    );
   }
 
-  changeActive(e) {
+  _changeActive(e) {
     const link = e.target.closest('.sidebar__item');
     if (!link) return;
 
@@ -15,6 +18,14 @@ class SidebarView {
     );
     currentActive.classList.remove('sidebar__item--active');
     link.classList.add('sidebar__item--active');
+  }
+
+  toggleSidebar(shown) {
+    if (shown) {
+      this._parentElement.style.left = '0';
+      return;
+    }
+    this._parentElement.style.left = '-100%';
   }
 }
 
