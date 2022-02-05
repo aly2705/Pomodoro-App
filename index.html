@@ -25,63 +25,94 @@
       </figure>
       <ul class="header__profile-options">
         <li class="header__option">
-        <a href="#" class="header__link">
-          <svg>
-            <use xlink:href="src/img/icons.svg#icon-cog"></use>
-          </svg><span class="header__link--label">
-            Settings
-          </span>
-        </a>
-      </li>
-      <li class="header__option">
-        <a href="#" class="header__link">
-          <svg>
-            <use xlink:href="src/img/icons.svg#icon-bell"></use>
-            
-          </svg>
-          <span class="header__new-notifications">2</span>
-          <span class="header__link--label">
-            Notifications
-          </span>
-         
-        </a></li>
+          <a href="#" class="header__link">
+            <svg>
+              <use xlink:href="src/img/icons.svg#icon-cog"></use></svg
+            ><span class="header__link--label"> Settings </span>
+          </a>
+        </li>
+        <li class="header__option">
+          <a href="#" class="header__link">
+            <svg>
+              <use xlink:href="src/img/icons.svg#icon-bell"></use>
+            </svg>
+            <span class="header__new-notifications">2</span>
+            <span class="header__link--label"> Notifications </span>
+          </a>
+        </li>
         <li class="header__profile-label">
-          <img class="header__profile-avatar" src="src/img/profile.svg"></img>
+          <img class="header__profile-avatar" src="src/img/profile.svg" />
           <span class="header__profile-name">Guest</span>
         </li>
-      </div>
+      </ul>
     </header>
     <nav class="sidebar">
-      <ul class="sidebar__list  ">
-        <li class="sidebar__item sidebar__item--active"><a href="#pomodoro" class="sidebar__link ">
-          <svg>
-            <use xlink:href="src/img/icons.svg#icon-stopwatch"></use>
-          </svg>Pomodoro
-        </a></li>
-        <li class="sidebar__item"><a href="#dashboard" class="sidebar__link">
-          <svg>
-            <use xlink:href="src/img/icons.svg#icon-home"></use>
-          </svg>Dashboard
-        </a></li>
-        <li class="sidebar__item"><a href="#statistics" class="sidebar__link">
-          <svg>
-            <use xlink:href="src/img/icons.svg#icon-bar-graph"></use>
-          </svg>Statistics
-        </a></li>
-        <li class="sidebar__item"><a href="#rewards" class="sidebar__link">
-          <svg>
-            <use xlink:href="src/img/icons.svg#icon-trophy"></use>
-          </svg>Rewards
-        </a></li>
+      <ul class="sidebar__list">
+        <li class="sidebar__item sidebar__item--active">
+          <a href="#pomodoro" class="sidebar__link">
+            <svg>
+              <use xlink:href="src/img/icons.svg#icon-stopwatch"></use></svg
+            >Pomodoro
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#dashboard" class="sidebar__link">
+            <svg>
+              <use xlink:href="src/img/icons.svg#icon-home"></use></svg
+            >Dashboard
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#statistics" class="sidebar__link">
+            <svg>
+              <use xlink:href="src/img/icons.svg#icon-bar-graph"></use></svg
+            >Statistics
+          </a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#rewards" class="sidebar__link">
+            <svg>
+              <use xlink:href="src/img/icons.svg#icon-trophy"></use></svg
+            >Rewards
+          </a>
+        </li>
       </ul>
     </nav>
     <main class="main">
       <div class="pomodoro">
         <ul class="pomodoro__options">
-          <li class="pomodoro__option pomodoro__option--active" data-timer="pomodoro">pomodoro</li>
+          <li
+            class="pomodoro__option pomodoro__option--active"
+            data-timer="pomodoro"
+          >
+            pomodoro
+          </li>
           <li class="pomodoro__option" data-timer="short break">short break</li>
           <li class="pomodoro__option" data-timer="long break">long break</li>
         </ul>
+        <div class="timer">
+          <div class="timer__circular">
+            <div class="timer__inner-circle">
+              <div class="timer__center">
+                <div class="timer__countdown">
+                  <span class="timer__min">25</span>:<span class="timer_sec"
+                    >00</span
+                  >
+                </div>
+                <button class="timer__btn">Pause</button>
+              </div>
+            </div>
+
+            <div class="timer__progress-bar">
+              <div class="timer__bar timer__bar--left">
+                <div class="timer__progress timer__progress--left"></div>
+              </div>
+              <div class="timer__bar timer__bar--right">
+                <div class="timer__progress timer__progress--right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>

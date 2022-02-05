@@ -13,6 +13,14 @@
   --color-text-secondary: #646060;
   --color-text-tertiary: #5f6161; }
 
+@keyframes progressLeft {
+  100% {
+    transform: rotate(-180deg); } }
+
+@keyframes progressRight {
+  100% {
+    transform: rotate(-180deg); } }
+
 *,
 *::after,
 *::before {
@@ -147,7 +155,8 @@ body {
 
 .pomodoro {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 4rem; }
   .pomodoro__options {
     list-style: none;
@@ -167,6 +176,78 @@ body {
       background-color: var(--color-primary); }
     .pomodoro__option:hover:not(.pomodoro__option--active) {
       color: var(--color-primary); }
+
+.timer {
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: var(--color-background);
+  border-radius: 50%;
+  box-shadow: inset -1rem -1rem 3rem rgba(0, 0, 0, 0.25), 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25); }
+  .timer__circular {
+    height: 30rem;
+    width: 30rem;
+    position: relative; }
+  .timer__inner-circle {
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 27rem;
+    width: 27rem;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-background);
+    border-radius: 50%; }
+  .timer__bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary-tint);
+    border-radius: 100%;
+    clip: rect(0, 30rem, 30rem, 15rem); }
+    .timer__bar--right {
+      transform: rotate(179.7deg);
+      z-index: 3; }
+  .timer__progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    clip: rect(0, 15rem, 30rem, 0);
+    background-color: var(--color-grey-1); }
+    .timer__progress--left {
+      z-index: 1; }
+    .timer__progress--right {
+      z-index: 1; }
+  .timer__center {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: var(--color-text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .timer__countdown {
+    margin-top: 3rem;
+    font-size: 6.8rem;
+    font-weight: 700;
+    line-height: 1; }
+  .timer__btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 2rem 0.5rem 1.75rem 1rem;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    transition: all 0.3s; }
+    .timer__btn:hover {
+      color: var(--color-primary); }
+  .timer__btn:active .timer {
+    box-shadow: inset -1rem -1rem 3rem rgba(0, 0, 0, 0.25), 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3); }
 
 .header {
   grid-row: header-start / header-end;

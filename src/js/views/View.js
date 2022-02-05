@@ -1,9 +1,9 @@
-class View {
+export default class View {
   _data;
 
   /**
    * Render the recived object to the DOM
-   * @param {Object | Object[]} data The data to be rendered (e.g. recipe)
+   * @param {Object | Object[]} data The data to be rendered (e.g. pomodoro)
    * @param {boolean} [render = true] If false create markup string instead of rendering to the DOM
    * @returns {undefined | string} A markup string is returned when render = false
    * @this {Object} View Instance
